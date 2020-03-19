@@ -1,9 +1,10 @@
 import React from 'react'
+import CustomNavBar from './../component/CustomNavBar'
 
 export default function Result() {
     return (
         <div>
-            Result Page
+            <CustomNavBar route="/picture" title="ผลการวินิฉัยโรค"/>
         </div>
     )
 }
