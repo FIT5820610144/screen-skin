@@ -1,27 +1,29 @@
-.App{
+@import url("https://fonts.googleapis.com/css?family=Kanit:300,400,500,600,700,800,900&display=swap");
+.App {
   height: 100vh;
+  font-family: "Kanit", sans-serif;
 }
 
-.navBar{
+.navBar {
   text-transform: uppercase;
   background-color: #5bb7c2 !important;
 }
 
-.home-page{
+.home-page {
   background: url(/images/home_bg.png);
   background-size: cover;
   height: 100vh;
 }
 
-.logo{
-    width: 70%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
+.logo {
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-.footer{
+.footer {
   position: absolute;
   bottom: 2%;
   left: 50%;
@@ -30,17 +32,86 @@
   color: #083b66;
 }
 
-.center{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.custom-button{
+.custom-button {
   background: transparent !important;
   border: 1px solid white !important;
-  width: 15rem; 
+  width: 15rem;
   color: #083b66 !important;
   margin-bottom: 10px !important;
+}
+
+html:not([data-scale]) .am-card:not(.am-card-full)::before {
+  border: 0px !important;
+}
+
+.custom-card {
+  background: #5bb7c2 !important;
+  border-radius: 10px !important;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.17);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.17);
+}
+
+.flex-img-icon {
+  margin-left: -2rem !important;
+}
+.card-text-item1 {
+  font-size: 2rem;
+  color: #083b66;
+  font-weight: bold;
+}
+
+.card-text-item2 {
+  color: white;
+  font-size: 0.7rem;
+}
+
+.card-img-icon {
+  background: white;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.card-item-img-icon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* test */
+
+.flex-container {
+  margin: 0 15px;
+}
+.flex-container .inline {
+  width: 80px !important;
+  margin: 9px 9px 9px 0;
+}
+.flex-container .small {
+  height: 20px !important;
+  line-height: 20px !important;
+}
+.sub-title {
+  color: #888;
+  font-size: 14px;
+  padding: 30px 0 18px 0;
+}
+.placeholder {
+  background-color: #ebebef;
+  color: #bbb;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
 }
