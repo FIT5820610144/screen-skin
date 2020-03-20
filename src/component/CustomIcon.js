@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
 
 export default function CustomIcon(props) {
-    return (
-        <div>
-            <img src={"/images/"+props.name+".png"} width={props.size}/>
-        </div>
-    )
+  const inline = { display: "inline" };
+  return (
+    <div style={props.inline && inline}>
+      <img src={"/images/" + props.name + ".png"} width={props.size} />
+    </div>
+  );
 }

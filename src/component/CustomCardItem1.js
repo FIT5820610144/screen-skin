@@ -3,11 +3,11 @@ import { Card, Flex } from "antd-mobile";
 import { useHistory } from "react-router-dom";
 
 export default function CustomCardItem1(props) {
-  const { image, text1, text2 } = props;
+  const { image, text1, text2, route, imgStyle } = props;
   const history = useHistory();
 
   function goNext() {
-    history.push("/shape");
+    history.push(route);
   }
   return (
     <div>
@@ -17,9 +17,9 @@ export default function CustomCardItem1(props) {
             <Flex.Item>
               <div className="card-img-icon">
                 <img
+                  style={imgStyle}
                   className="card-item-img-icon"
                   src={"/images/" + image + ""}
-                  width="20"
                   alt=""
                 />
               </div>
