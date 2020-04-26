@@ -7,11 +7,12 @@ export default function CustomNavBar(props) {
   const history = useHistory();
 
   function onBack() {
-    history.push(props.route);
+    history.push(props.route, "back");
   }
 
   function goHome() {
     history.push("/");
+    localStorage.clear();
   }
   return (
     <div>

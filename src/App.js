@@ -11,6 +11,7 @@ import Color from "./pages/Color";
 import AnatomicalSite from "./pages/AnatomicalSite";
 import Picture from "./pages/Picture";
 import Result from "./pages/Result";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/anatomicalsite" exact component={AnatomicalSite} />
         <Route path="/picture" exact component={Picture} />
         <Route path="/result" exact component={Result} />
+        <Route path="/contact" exact component={Contact} />
       </div>
     </Router>
   );

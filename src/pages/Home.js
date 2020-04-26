@@ -8,19 +8,27 @@ export default function Home() {
     history.push("/mophology");
   }
 
+  function goContact() {
+    history.push("/contact");
+  }
+
   return (
-    <div className="home-page">
-      <img className="logo" src="/images/logo.png" alt="logo" />
-      <div className="center">
-        <Button className="custom-button" onClick={handleClick}>
-          คัดกรองโรค
-        </Button>
-        <Button className="custom-button">ติดต่อสอบถาม</Button>
-      </div>
-      <div className="footer">
-        จัดทำโดย
-        <br />
-        นักศึกษาคณะพยาบาลศาสตร์ ม.อ.ปัตตานี
+    <div>
+      <div className="home-page">
+        <img className="logo" src="/home-logo.png" alt="logo" />
+        <div className="center">
+          <Button className="custom-button" onClick={handleClick}>
+            คัดกรองโรค
+          </Button>
+          <Button className="custom-button" onClick={goContact}>
+            ติดต่อสอบถาม
+          </Button>
+        </div>
+        <div className="footer">
+          จัดทำโดย
+          <br />
+          นักศึกษาคณะพยาบาลศาสตร์ ม.อ.ปัตตานี
+        </div>
       </div>
     </div>
   );
