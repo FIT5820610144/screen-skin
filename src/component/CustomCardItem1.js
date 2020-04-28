@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Flex } from "antd-mobile";
 import { useHistory } from "react-router-dom";
+import CustomModal from "./CustomModal.js";
 
 export default function CustomCardItem1(props) {
   const { image, text1, text2, route, imgStyle } = props;
@@ -9,9 +10,27 @@ export default function CustomCardItem1(props) {
   function goNext() {
     history.push(route);
   }
+
+  const [modal, setModal] = useState(false);
+  function openModal() {
+    setModal((modal) => (modal = true));
+  }
+
+  function closeModal() {
+    console.log("close");
+    setModal((modal) => (modal = false));
+  }
+
+  console.log(modal);
   return (
     <div>
-      <Card className="custom-card" onClick={goNext}>
+      <CustomModal
+        visible={modal}
+        onClose={closeModal}
+        title={text1}
+        image={image}
+      />
+      <Card className="custom-card">
         <Card.Body>
           <Flex>
             <Flex.Item>
@@ -21,6 +40,7 @@ export default function CustomCardItem1(props) {
                   className="card-item-img-icon"
                   src={"/images/" + image + ""}
                   alt=""
+                  onClick={() => openModal()}
                 />
               </div>
             </Flex.Item>
