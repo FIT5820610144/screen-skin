@@ -270,6 +270,7 @@ export default function AnatomicalSite(props) {
               text1={item.text1}
               text2={item.text2}
               route="/picture"
+              modalUse={false}
             />
             <WhiteSpace size="lg" />
           </div>

@@ -111,6 +111,7 @@ export default function Mophology(props) {
               text1={item.text1}
               text2={item.text2}
               route="/shape"
+              modalUse
             />
             <WhiteSpace size="lg" />
           </div>

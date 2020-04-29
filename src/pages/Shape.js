@@ -86,6 +86,7 @@ export default function Shape(props) {
               text2={item.text2}
               route="/arrange"
               imgStyle={imageStyle}
+              modalUse
             />
             <WhiteSpace size="lg" />
           </div>

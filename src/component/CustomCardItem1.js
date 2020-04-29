@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import CustomModal from "./CustomModal.js";
 
 export default function CustomCardItem1(props) {
-  const { image, text1, text2, route, imgStyle } = props;
+  const { image, text1, text2, route, imgStyle, modalUse } = props;
   const history = useHistory();
 
   function goNext() {
@@ -17,20 +17,23 @@ export default function CustomCardItem1(props) {
   }
 
   function closeModal() {
-    console.log("close");
     setModal((modal) => (modal = false));
   }
 
-  console.log(modal);
   return (
     <div>
-      <CustomModal
-        visible={modal}
-        onClose={closeModal}
-        title={text1}
-        image={image}
-      />
-      <Card className="custom-card">
+      {modalUse && (
+        <CustomModal
+          visible={modal}
+          onClose={closeModal}
+          title={text1}
+          image={image}
+        />
+      )}
+      <Card
+        className="custom-card"
+        onClick={modalUse === false ? goNext : null}
+      >
         <Card.Body>
           <Flex>
             <Flex.Item>
@@ -44,7 +47,7 @@ export default function CustomCardItem1(props) {
                 />
               </div>
             </Flex.Item>
-            <Flex.Item className="flex-img-icon">
+            <Flex.Item className="flex-img-icon" onClick={goNext}>
               <div className="card-text-item1">{text1}</div>
               <div className="card-text-item2">{text2}</div>
             </Flex.Item>

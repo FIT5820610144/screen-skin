@@ -1,4 +1,4 @@
-import { Modal, List, Button, WhiteSpace, WingBlank, Icon } from "antd-mobile";
+import { Modal } from "antd-mobile";
 import React from "react";
 
 function closest(el, selector) {
@@ -58,7 +58,7 @@ class CustomModal extends React.Component {
         title={this.props.title}
         footer={[
           {
-            text: "Ok",
+            text: "Close",
             onPress: () => {
               this.props.onClose();
             },

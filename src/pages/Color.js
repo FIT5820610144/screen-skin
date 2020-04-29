@@ -156,6 +156,7 @@ export default function Color(props) {
               text1={item.text1}
               text2={item.text2}
               route="/anatomicalsite"
+              modalUse={false}
             />
             <WhiteSpace size="lg" />
           </div>

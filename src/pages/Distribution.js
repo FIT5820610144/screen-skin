@@ -147,6 +147,7 @@ export default function Distribution(props) {
               text2={item.text2}
               route="/color"
               imgStyle={imageStyle}
+              modalUse
             />
             <WhiteSpace size="lg" />
           </div>

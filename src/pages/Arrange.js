@@ -96,6 +96,7 @@ export default function Arrange(props) {
               text2={item.text2}
               route="/distribution"
               imgStyle={imageStyle}
+              modalUse
             />
             <WhiteSpace size="lg" />
           </div>
